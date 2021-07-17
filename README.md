@@ -23,7 +23,7 @@ Before running the application first install the following dependencies.
 ```python
   pip install jupyterlab
   pip install pandas
-  pip install -U matplotlib
+  pip install matplotlib
 ```
 
 ---
