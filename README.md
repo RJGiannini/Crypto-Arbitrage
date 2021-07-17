@@ -32,7 +32,8 @@ Before running the application first install the following dependencies.
 
 **Plotting Single Date bitstamp dataset.**
 ```
-bitstamp_sliced.plot(title="Data via Bitstamp Exchange 2018-01-01 to 2018-04-01 Bitcoin Close Prices",figsize=(10,7), color="red")
+bitstamp_sliced.plot(title="Data via Bitstamp Exchange 2018-01-01 to 2018-04-01 Bitcoin Close Prices",
+figsize=(10,7), color="red")
 
 ```
 **Plotting Full Time Period of both bitstamp and coinbase DataFrames for overlay comparison.**
@@ -47,7 +48,8 @@ ax.legend(["Bitstamp", "Coinbase"])
 **Plotting Single Date dataset from both bitstamp and coinbase DataFrames for overlay comparison.**
 ```
 bitstamp_sliced.loc['2018-01-01' : '2018-02-01'].plot(
-    legend=True, figsize=(15, 10), title="Exchange Comparison (Earlier Time Period)", color="red", label="Bitstamp")
+    legend=True, figsize=(15, 10), title="Exchange Comparison (Earlier Time Period)",
+    color="red", label="Bitstamp")
 coinbase_sliced.loc['2018-01-01' : '2018-02-01'].plot(
     legend=True, figsize=(15, 10), color="blue", label="Coinbase")
 ```
