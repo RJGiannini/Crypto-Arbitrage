@@ -31,34 +31,44 @@ Before running the application first install the following dependencies.
 ## Examples
 
 **Plotting Single Date bitstamp dataset.**
-```bitstamp_sliced.plot(title="Data via Bitstamp Exchange 2018-01-01 to 2018-04-01 Bitcoin Close Prices",figsize=(10,7), color="red")
+```
+bitstamp_sliced.plot(title="Data via Bitstamp Exchange 2018-01-01 to 2018-04-01 Bitcoin Close Prices",figsize=(10,7), color="red")
+
 ```
 **Plotting Full Time Period of both bitstamp and coinbase DataFrames for overlay comparison.**
-```ax = bitstamp_sliced.plot(figsize=(20, 10),color="red", title='Exchange Comparison')
+```
+ax = bitstamp_sliced.plot(figsize=(20, 10),color="red", title='Exchange Comparison')
 coinbase_sliced.plot(color="blue",ax=ax)
 
 ax.legend(["Bitstamp", "Coinbase"])
+
 ```
 
 **Plotting Single Date dataset from both bitstamp and coinbase DataFrames for overlay comparison.**
-```bitstamp_sliced.loc['2018-01-01' : '2018-02-01'].plot(
+```
+bitstamp_sliced.loc['2018-01-01' : '2018-02-01'].plot(
     legend=True, figsize=(15, 10), title="Exchange Comparison (Earlier Time Period)", color="red", label="Bitstamp")
 coinbase_sliced.loc['2018-01-01' : '2018-02-01'].plot(
     legend=True, figsize=(15, 10), color="blue", label="Coinbase")
 ```
 
 **Calculating arbitrage spread of bitstamp and coinbase DataFrames, generating summary statistics of arbitrage in the early dataset.**
-```arbitrage_spread_early = coinbase_sliced.loc['2018-01-16'] - bitstamp_sliced.loc['2018-01-16']
+```
+arbitrage_spread_early = coinbase_sliced.loc['2018-01-16'] - bitstamp_sliced.loc['2018-01-16']
 
 arbitrage_spread_early.describe()
+
 ```
 
 **Visualizing the arbitrage spread from early in the dataset in a box plot.**
-```arbitrage_spread_early.plot(kind='box', figsize=(10, 7), title="Arbitrage Spread - Jan 16, 2018")
+```
+arbitrage_spread_early.plot(kind='box', figsize=(10, 7), title="Arbitrage Spread - Jan 16, 2018")
+
 ```
 
 **Calculating the potential profit, in dollars, per trade, any missing values from the resulting DataFrame are dropped.**
-```profit_early = profitable_trades_early * bitstamp_sliced.loc['2018-01-16']
+```
+profit_early = profitable_trades_early * bitstamp_sliced.loc['2018-01-16']
 
 profit_per_trade_early = profit_early.dropna()
 
@@ -66,7 +76,9 @@ profit_per_trade_early.head()
 ```
 
 **Plotting the results for the early profit per trade DataFrame.**
-```profit_per_trade_early.plot(figsize=(10, 7), title="Profit Per Trade - Early Date", color="green")
+```
+profit_per_trade_early.plot(figsize=(10, 7), title="Profit Per Trade - Early Date", color="green")
+
 ```
 
 ---
