@@ -78,11 +78,15 @@ To use the Crypto Arbitrage application simply clone the repository and run the 
 
 Upon running the Crypto Arbitrage you will find below various .csv data-dependant results.
 
-![Loan Qualifier With Saved Output](Images/qualifier_saved_output.png)
+![Collecting Bitstamp Data](Images/collecting_bitstamp_data.png)
 
-![Loan Qualifier With No Saved Output](Images/qualifier_no_output_save.png)
+![Collecting Coinbase Data](Images/collecting_coinbase_data.png)
 
-![Loan Qualifier User Not Qualified](Images/qualifier_user_not_qualified.png)
+![Plotting Full Bitstamp Data](Images/plotting_full_bitstamp_dataset.png)
+
+![Plotting Full Coinbase Data](Images/plotting_full_coinbase_dataset.png)
+
+![Plotting Full Bitstamp and Coinbase Data Overlay](Images/plotting_full_dataframe_overlay.png)
 
 ---
 
